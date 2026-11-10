@@ -1,15 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
 
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-
-import Home from './Page/Home';
-import HookDetails from './Page/HookDetails';
+import Home from './Components/Home/Home';
 import ScrollToTop from './Components/ScrollToTop';
 import UseState from './Components/Hooks/UseState/UseState';
 import About from './Components/About/About';
 import Guide from './Components/Guide/Guide';
+import UseEffect from './Components/Hooks/UseEffect/UseEffect';
 
 function App() {
   return (
@@ -19,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hooks/usestate" element={<UseState />} />
+        <Route path="/hooks/useeffect" element={<UseEffect />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/guide" element={<Guide />} />
 

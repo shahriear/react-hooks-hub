@@ -1,12 +1,12 @@
-import React from 'react'
-import UseState from '../Components/Hooks/UseState/UseState'
+import React from 'react';
+import UseState from '../Components/Hooks/UseState/UseState';
 
 const HookDetails = () => {
   return (
     <>
-      <UseState/>
+      {/* <UseState /> */}
     </>
-  )
-}
+  );
+};
 
-export default HookDetails
+export default HookDetails;

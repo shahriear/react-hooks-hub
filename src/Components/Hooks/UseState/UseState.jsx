@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { RotateCcw, Plus, Minus } from 'lucide-react';
-// import './UseState.css';
+import './UseState.css';
 
 const UseState = () => {
   const [count, setCount] = useState(0);
+  const [name, setName] = useState('');
 
-  const resetCount = () => {
+  const HandleCount = () => {
     setCount(0);
+  };
+
+  const handleChange = e => {
+    setName(e.target.value);
   };
 
   return (
@@ -88,39 +93,120 @@ const UseState = () => {
                 Increase
               </button>
 
-              <button onClick={resetCount} className="counter-btn reset">
+              <button onClick={HandleCount} className="counter-btn reset">
                 <RotateCcw size={17} />
                 Reset
               </button>
             </div>
           </div>
+          {/* Input Demo */}
+          <div className="demo-card input-demo">
+            <span className="demo-label">Live Input Example</span>
+
+            <h3>Enter Your Name</h3>
+
+            <input
+              type="text"
+              placeholder="Type your name..."
+              value={name}
+              onChange={handleChange}
+            />
+
+            <h3 className="input-result">
+              Your Name: {name || 'No name entered'}
+            </h3>
+
+            <button
+              onClick={() => setName('')}
+              className="counter-btn reset"
+              disabled={!name}
+            >
+              <RotateCcw size={17} />
+              Clear Input
+            </button>
+          </div>
         </section>
+
+        {/* Example Code */}
 
         {/* Example Code */}
         <section className="hook-section">
           <h2>Example Code</h2>
 
-          <pre className="code-example">
-            <code>
-              {`import { useState } from 'react';
+          <p>Here are two practical examples of using the useState Hook.</p>
 
-               function Counter() {
-               const [count, setCount] = useState(0);
+          {/* Counter Example */}
+          <div className="example-block">
+            <h3>01. Counter Example</h3>
 
-               return (
-               <div>
-               <h2>{count}</h2>
+            <pre className="code-example">
+              <code>
+                {`import { useState } from 'react';
 
-               <button onClick={() => setCount(count + 1)}>
-               Increase
-               </button>
-               </div>
-                 );
-                 }
+function Counter() {
+  const [count, setCount] = useState(0);
 
-              export default Counter;`}
-            </code>
-          </pre>
+  return (
+    <div>
+      <h2>{count}</h2>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increase
+      </button>
+
+      <button onClick={() => setCount(count - 1)}>
+        Decrease
+      </button>
+
+      <button onClick={() => setCount(0)}>
+        Reset
+      </button>
+    </div>
+  );
+}
+
+export default Counter;`}
+              </code>
+            </pre>
+          </div>
+
+          {/* Input Example */}
+          <div className="example-block">
+            <h3>02. Input Example</h3>
+
+            <pre className="code-example">
+              <code>
+                {`import { useState } from 'react';
+
+function NameInput() {
+  const [name, setName] = useState('');
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={name}
+        onChange={handleChange}
+      />
+
+      <h2>Your Name: {name}</h2>
+
+      <button onClick={() => setName('')}>
+        Clear
+      </button>
+    </div>
+  );
+}
+
+export default NameInput;`}
+              </code>
+            </pre>
+          </div>
         </section>
 
         {/* Key Points */}

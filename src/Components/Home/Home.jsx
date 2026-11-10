@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 import { Link } from 'react-router-dom';
-// import './Home.css';
+import './Home.css';
 
 const Home = () => {
   return (

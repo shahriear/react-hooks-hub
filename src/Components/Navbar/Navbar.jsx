@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ArrowUpRight, Code2, ChevronDown } from 'lucide-react';
 
-// import './Navbar.css';
+import './Navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
