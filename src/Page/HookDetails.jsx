@@ -1,8 +1,11 @@
 import React from 'react'
+import UseState from '../Components/Hooks/UseState/UseState'
 
 const HookDetails = () => {
   return (
-    <div>HookDetails</div>
+    <>
+      <UseState/>
+    </>
   )
 }
 
