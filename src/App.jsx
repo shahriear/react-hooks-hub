@@ -9,20 +9,24 @@ import UseState from './Components/Hooks/UseState/UseState';
 import About from './Components/About/About';
 import Guide from './Components/Guide/Guide';
 import UseEffect from './Components/Hooks/UseEffect/UseEffect';
-import Components1 from './Components/Components1';
+// import Components1 from './Components/Components1';
 import UsecallBack from './Components/UsecallBack/UsecallBack';
+import UseContext from './Components/UseContext/UseContext';
+import UseRef from './Components/Hooks/UseRaf/UseRef';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hooks/usestate" element={<UseState />} />
         <Route path="/hooks/useeffect" element={<UseEffect />} />
         <Route path="/hooks/usecallback" element={<UsecallBack />} />
+        <Route path="/hooks/usecontext" element={<UseContext />} />
+        <Route path="/hooks/useref" element={<UseRef />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/guide" element={<Guide />} />

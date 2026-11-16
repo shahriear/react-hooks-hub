@@ -19,10 +19,8 @@ const Navbar = () => {
     { name: 'useEffect', path: '/hooks/useeffect' },
     { name: 'useContext', path: '/hooks/usecontext' },
     { name: 'useRef', path: '/hooks/useref' },
-    { name: 'useMemo', path: '/hooks/usememo' },
+
     { name: 'useCallback', path: '/hooks/usecallback' },
-    { name: 'useReducer', path: '/hooks/usereducer' },
-    { name: 'useId', path: '/hooks/useid' },
   ];
 
   const closeMenu = () => {
