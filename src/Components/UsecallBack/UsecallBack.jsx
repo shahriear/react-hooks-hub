@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import Components1 from '../Components1';
 import { RotateCcw, Code2 } from 'lucide-react';
-import '../UsecallBack/UsecallBack.css';
+import './UsecallBack.css';
 
 const UsecallBack = () => {
   const [count, setCount] = useState(0);
